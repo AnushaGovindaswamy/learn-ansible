@@ -1,9 +1,6 @@
--name:demo on playbook
- hosts:one
- tasks:
-    - name: Print the gateway for each host when defined
-      ansible.builtin.debug:
-       -msg: "Helloworld"
-       -msg2: "hiii"
-
-
+- name: Demo on First Playbook
+  hosts: all
+  tasks:
+     - name: Print Hello World
+       ansible.builtin.debug:
+         msg: Hello World
