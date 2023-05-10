@@ -1,6 +1,8 @@
--name: demo onplaybopok
- hosts: all
- tasks:
-   -name: print
-    anisble.builtin.debug:
-      msg: hello anusha
+- name: demo onplaybopok
+  hosts: all
+  tasks:
+    - name: print msg
+      ansible.builtin.debug:
+        msg: hello anusha
+
+
