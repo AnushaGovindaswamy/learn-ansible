@@ -1,3 +1,7 @@
-
+- name: demo on playbook
+  hosts: all
+  tasks:
+    -ansible.builtin.debug:
+      msg: "print anusha"
 
 
