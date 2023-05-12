@@ -30,7 +30,7 @@
 - name: Demo on playlevel variables for Roles
   hosts: all
   vars:
-    URL_play: www.rolesplaylevel.com
+    URL: www.rolesplaylevel.com
   roles:
     -practice
 #register level variable
