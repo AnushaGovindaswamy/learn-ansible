@@ -1,0 +1,9 @@
+- name: Demo on playlevel variables
+  hosts: all
+  vars:
+    URL: www.google.com
+  tasks:
+    - name: aceesing url
+      ansible.builtin.debug:
+        msg: Hello Anusha play level variables
+
