@@ -33,6 +33,17 @@
     URL_play: www.rolesplaylevel.com
   roles:
     -practice
+#register level variable
+- name: Demo on register level
+  hosts: all
+  tasks:
+    - name: shell
+      ansible.builtin.shell: uptime
+      register: output
+    - name: print
+      ansible.builtin.debug :
+        msg: ""{{output}}"
+
 
 
 
