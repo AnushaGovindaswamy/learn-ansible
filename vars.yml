@@ -15,5 +15,26 @@
         msg: "{{URL}}"
       vars:
         URL: www.sample.com
-        #variable can be accesed at TASK level
+#variable can be accesed at TASK level
+#Accessing variables at File level using vars_files
+#vars_files supports only at play level but not at task level
+- name: Demo on vars_files play level variables
+  hosts: all
+  vars_files:
+    -exvars.yml
+  tasks:
+    - name: aceesing url
+      ansible.builtin.debug:
+        msg: Hello Anusha play level variables {{URL}}
+#variable can be accesed at play level for Roles
+- name: Demo on playlevel variables for Roles
+  hosts: all
+  vars:
+    URL: www.rolesplaylevel.com
+  roles:
+    -practice
+
+
+
+
 

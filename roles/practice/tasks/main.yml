@@ -1,3 +1,6 @@
 - name: Demo on roles
   ansible.builtin.debug:
     msg: hello anusha practising roles
+- name: Demo on roles at playlevel vars
+  ansible.builtin.debug:
+    msg: URL- {{URL}}
