@@ -3,7 +3,7 @@
     msg: hello anusha practising roles
 - name: Demo on roles at playlevel vars
   ansible.builtin.debug:
-    msg: URLPLAY- {{URL}}
+    msg: URLPLAY- {{URL_PLAY}}
 - name: Print Variable from Role
   ansible.builtin.debug:
     msg: URL - {{ URL }}
