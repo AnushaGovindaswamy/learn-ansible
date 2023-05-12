@@ -4,6 +4,6 @@
 - name: Demo on roles at playlevel vars
   ansible.builtin.debug:
     msg: URL- {{URL_PLAY}}
-- name: Demo on roles at rolelevel vars
+- name: Print Variable from Role
   ansible.builtin.debug:
-    msg: URL- {{URL}}
+    msg: URL - {{ URL }}
