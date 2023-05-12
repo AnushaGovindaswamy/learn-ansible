@@ -5,5 +5,15 @@
   tasks:
     - name: aceesing url
       ansible.builtin.debug:
-        msg: Hello Anusha play level variables
+        msg: Hello Anusha play level variables {{URL}}
+#variable can be accesed at play level
+- name: Demo on tasklevel variables
+  hosts: all
+  tasks:
+    - name: aceesing url
+      ansible.builtin.debug:
+        msg: "{{URL}}"
+      vars:
+        URL: www.sample.com
+        #variable can be accesed at TASK level
 
