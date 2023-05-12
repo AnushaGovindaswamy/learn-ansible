@@ -3,4 +3,7 @@
     msg: hello anusha practising roles
 - name: Demo on roles at playlevel vars
   ansible.builtin.debug:
+    msg: URL- {{URL_PLAY}}
+- name: Demo on roles at rolelevel vars
+  ansible.builtin.debug:
     msg: URL- {{URL}}
