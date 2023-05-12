@@ -38,7 +38,7 @@
   vars:
     URL: www.rolesplaylevel.com
   roles:
-    -practice
+    - practice
 #register level variable
 - name: Demo on register level
   hosts: all
