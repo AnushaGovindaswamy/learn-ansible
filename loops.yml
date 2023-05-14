@@ -1,0 +1,22 @@
+- name: Demo on loops
+  hosts: local host
+  connection: local
+  tasks:
+    - name: loops
+      ansible.builtin.debug:
+        msg:Student name is {{person}}
+      loop:
+        - Anusha
+        - Govindaswamy
+        - Female
+- name: Demo on loops other example
+  hosts: local host
+  connection: local
+  tasks:
+    - name: loops
+      ansible.builtin.debug:
+        msg:Student name is {{person.name}},age is {{person.age}}
+      loop:
+        - {name="Anusha",age=26}
+        - {name="Govindaswamy",age=27}
+
