@@ -4,7 +4,7 @@
   tasks:
     - name: loops
       ansible.builtin.debug:
-        msg:Student name is {{person}}
+        msg: Student name is {{person}}
       loop:
         - Anusha
         - Govindaswamy
@@ -15,7 +15,7 @@
   tasks:
     - name: loops
       ansible.builtin.debug:
-        msg:Student name is {{person.name}},age is {{person.age}}
+        msg: Student name is {{person.name}},age is {{person.age}}
       loop:
         - {name="Anusha",age=26}
         - {name="Govindaswamy",age=27}
