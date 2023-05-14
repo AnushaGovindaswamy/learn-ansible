@@ -32,7 +32,7 @@
         - apple
         - banana
 
-    - name: Demo task for loop
+    - name: Demo task for loop 2
       ansible.builtin.debug:
         msg: Fruit Name - {{ item.name }}, Quantity - {{ item.quantity }}
       loop:
