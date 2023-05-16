@@ -8,14 +8,45 @@
       ansible.builtin.debug:
         msg: Anusha learning Devops
 #TO Install yum module related things
+
 #To Execute shell commands
 #To import tasks
+- name: Include app_prerequisites
+  ansible.builtin.import_tasks:
+    file: app_prereq.yml
+
+
 #To import role
+- name: Import Common NodeJS
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs
 #To copy files
+- name: Copy roboshop Config file
+  ansible.builtin.template:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
 #To change the working directory and execute
+- name: Install NodeJS dependencies
+  ansible.builtin.shell: npm install
+  args:
+    chdir: /app
 #When condition
 #blocks
 #To create user
 #to create directory
+- name: Create app directory
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: directory
 #To clean old app content
+- name: Clean Old App content
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
 #To download and unarchieve app content
+- name: Download App Content
+  ansible.builtin.unarchive:
+    src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
